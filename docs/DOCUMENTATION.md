@@ -60,7 +60,7 @@ Die Versionen V1 (imperativ) und V2 (funktional) liefern denselben Output.
   - Lesbarkeit steigt bei komplexeren Aggregationen (z. B. Gruppierungen)
 - Wiederverwendung:
   - Ja, insbesondere für analytische Tasks und Datenverarbeitung in Pipelines
-  - Im Betrieb: Reports, ETL-Vorarbeiten, Auswertung von Logs/Events, KPIs
+  - Im Betrieb: Reports, Auswertung von Logs/Events
 
 ## Ausführen
 
