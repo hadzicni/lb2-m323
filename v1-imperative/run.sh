@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
-mkdir -p out
-javac -d out -encoding UTF-8 $(find src -name "*.java")
-java -cp out Main
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+mkdir -p "$DIR/out"
+javac -d "$DIR/out" -encoding UTF-8 $(find "$DIR/src" -name "*.java")
+cd "$DIR"
+java -cp "$DIR/out" Main
