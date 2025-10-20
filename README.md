@@ -16,16 +16,19 @@ Voraussetzung: JDK 17+ im `PATH` (`javac`, `java`).
 
 - Imperativ: `./v1-imperative/run.ps1`
 - Funktional: `./v2-functional/run.ps1`
+- Vergleich (V1 vs V2): `./compare.ps1` (legt Outputs in `compare-out/` ab)
 
 ### Windows (CMD)
 
 - Imperativ: `v1-imperative\\run.bat`
 - Funktional: `v2-functional\\run.bat`
+- Vergleich (V1 vs V2): `compare.bat`
 
 ### macOS/Linux (bash)
 
 - Imperativ: `bash v1-imperative/run.sh`
 - Funktional: `bash v2-functional/run.sh`
+- Vergleich (V1 vs V2): `bash compare.sh`
 
 ## Datenquellen (Beispiele/Ideen)
 
@@ -53,4 +56,3 @@ Siehe `docs/DOCUMENTATION.md` (kann zu PDF exportiert werden). Enthält:
 - Projektantrag (gemäss Vorgabe)
 - Beispiel-Outputs (identisch für V1 und V2)
 - Fazit zum Nutzen funktionaler Elemente
-

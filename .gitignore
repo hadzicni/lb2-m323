@@ -1,0 +1,31 @@
+# Java build outputs
+*.class
+out/
+**/out/
+build/
+target/
+
+# Project-specific generated outputs
+compare-out/
+v1-imperative/out/
+v2-functional/out/
+
+# Logs
+*.log
+
+# IDE / Editor
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archives (uncomment if desired)
+# *.zip
+

@@ -27,7 +27,7 @@ public class Main {
         int season = 2024;
         String team = "FC Basel";
 
-        System.out.println("=== Fussballdaten Analyse (Funktional) ===\n");
+        System.out.println("=== Fussballdaten Analyse ===\n");
 
         // Filter
         System.out.println("-- Filter: Spiele " + league + " " + season + " --");
@@ -92,4 +92,3 @@ public class Main {
                 homePct, awayPct, drawPct);
     }
 }
-
