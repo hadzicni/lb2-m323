@@ -1,6 +1,6 @@
 # Modul 323 Projekt — Fussballdaten (Imperativ vs. Funktional)
 
-Dieses Repo enthält ein Java-Konsolenprojekt zur Auswertung von Fussballdaten. 
+Dieses Repo enthält ein Java-Konsolenprojekt zur Auswertung von Fussballdaten.
 Es gibt zwei Versionen:
 
 - v1-imperative: klassische imperative Implementierung (Schleifen, Mutable State)
@@ -50,7 +50,7 @@ In diesem Projekt liegen kleine Beispieldatensätze in CSV-Form.
 
 ## Dokumentation
 
-Siehe `docs/DOCUMENTATION.md` (kann zu PDF exportiert werden). Enthält:
+Siehe `docs/DOCUMENTATION.md`. Enthält:
 
 - Wahl der Sprache (Java) und funktionale Elemente (Streams, Lambdas, Collector)
 - Projektantrag (gemäss Vorgabe)
