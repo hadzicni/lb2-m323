@@ -33,7 +33,7 @@ Voraussetzung: JDK 17+ im `PATH` (`javac`, `java`).
 - Funktional: `bash v2-functional/run.sh`
 - Vergleich (V1 vs V2): `bash compare.sh`
 
-## Datenquellen (Beispiele/Ideen)
+## Datenquellen
 
 - https://opendata.swiss/de
 - https://www.pxweb.bfs.admin.ch/pxweb/de/

@@ -53,7 +53,7 @@ public class Main {
         int season = 2024;
         String team = "FC Basel";
 
-        System.out.println("=== Fussballdaten Analyse (funktional) ===\n");
+        System.out.println("=== Fussballdaten Analyse ===\n");
 
         // --- Filter: nur Spiele der Liga/Saison ---
         System.out.println("-- Filter: Spiele " + league + " " + season + " --");
