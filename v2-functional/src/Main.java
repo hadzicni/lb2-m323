@@ -71,7 +71,7 @@ public class Main {
         System.out.println();
 
         // --- Map: Tordifferenz je Spiel ---
-        System.out.println("-- Map: Tordifferenz pro Spiel (alle) (letzte 10) --");
+        System.out.println("-- Map: Tordifferenz pro Spiel Super League 2025 (letzte 10) --");
         int startIdxMap = Math.max(0, seasonMatches.size() - 10);
         seasonMatches.subList(startIdxMap, seasonMatches.size()).stream()
                 .map(m -> new Object[]{m.homeTeam + " - " + m.awayTeam, m.homeGoals - m.awayGoals})
