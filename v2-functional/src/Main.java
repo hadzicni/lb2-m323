@@ -134,10 +134,12 @@ public class Main {
         class Row { String team; int w,d,l,gf,ga,gd,pts; Row(String t,int w,int d,int l,int gf,int ga){this.team=t;this.w=w;this.d=d;this.l=l;this.gf=gf;this.ga=ga;this.gd=gf-ga;this.pts=w*3+d;} }
         List<Row> rows = table.entrySet().stream()
                 .map(e -> new Row(e.getKey(), e.getValue().w, e.getValue().d, e.getValue().l, e.getValue().gf, e.getValue().ga))
-                .sorted(Comparator.<Row>comparingInt(r -> r.pts).reversed()
-                        .thenComparingInt(r -> r.gd).reversed()
-                        .thenComparingInt(r -> r.gf).reversed()
-                        .thenComparing(r -> r.team))
+                .sorted(
+                        Comparator.comparingInt((Row r) -> r.pts).reversed()
+                                .thenComparing(Comparator.comparingInt((Row r) -> r.gd).reversed())
+                                .thenComparing(Comparator.comparingInt((Row r) -> r.gf).reversed())
+                                .thenComparing(r -> r.team)
+                )
                 .collect(Collectors.toList());
         System.out.printf(Locale.ROOT, "%-14s | %2s %2s %2s | %3s %3s %3s | %3s%n",
                 "Team","W","D","L","GF","GA","GD","Pkt");
