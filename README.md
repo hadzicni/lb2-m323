@@ -8,6 +8,9 @@ Es gibt zwei Versionen:
 
 Beide Versionen verwenden die gleichen Beispieldaten (CSV) und generieren den gleichen Output.
 
+Ziel des Projekts ist es, den Unterschied zwischen imperativer und funktionaler Programmierung in Java zu zeigen.
+Anhand realer Fussballdaten werden verschiedene Datenoperationen (Filter, Map, Reduce) verglichen.
+
 ## Ausführen
 
 Voraussetzung: JDK 17+ im `PATH` (`javac`, `java`).
@@ -56,3 +59,8 @@ Siehe `docs/DOCUMENTATION.md`. Enthält:
 - Projektantrag (gemäss Vorgabe)
 - Beispiel-Outputs (identisch für V1 und V2)
 - Fazit zum Nutzen funktionaler Elemente
+
+## Fazit
+
+Beide Versionen liefern den gleichen Output.
+Die funktionale Variante (V2) ist kompakter, leichter zu lesen und reduziert Fehlerquellen durch unveränderliche Datenflüsse.
