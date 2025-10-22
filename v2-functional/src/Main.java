@@ -60,17 +60,20 @@ public class Main {
         System.out.println("=== Fussballdaten Analyse ===\n");
 
         // --- Filter: nur Spiele der Liga/Saison ---
-        System.out.println("-- Filter: Spiele " + league + " " + season + " --");
+        System.out.println("-- Filter: Spiele " + league + " " + season + " (letzte 10) --");
         List<Match> seasonMatches = matches.stream()
                 .filter(m -> m.league.equals(league) && m.season == season)
                 .collect(Collectors.toList());
-        seasonMatches.forEach(m -> System.out.printf(Locale.ROOT, "%s | %s vs %s | %d:%d%n",
-                m.date, m.homeTeam, m.awayTeam, m.homeGoals, m.awayGoals));
+        int startIdx = Math.max(0, seasonMatches.size() - 10);
+        seasonMatches.subList(startIdx, seasonMatches.size())
+                .forEach(m -> System.out.printf(Locale.ROOT, "%s | %s vs %s | %d:%d%n",
+                        m.date, m.homeTeam, m.awayTeam, m.homeGoals, m.awayGoals));
         System.out.println();
 
         // --- Map: Tordifferenz je Spiel ---
-        System.out.println("-- Map: Tordifferenz pro Spiel (alle) --");
-        matches.stream()
+        System.out.println("-- Map: Tordifferenz pro Spiel (alle) (letzte 10) --");
+        int startIdxMap = Math.max(0, seasonMatches.size() - 10);
+        seasonMatches.subList(startIdxMap, seasonMatches.size()).stream()
                 .map(m -> new Object[]{m.homeTeam + " - " + m.awayTeam, m.homeGoals - m.awayGoals})
                 .forEach(arr -> System.out.printf(Locale.ROOT, "%s | Diff: %d%n", arr[0], (int) arr[1]));
         System.out.println();

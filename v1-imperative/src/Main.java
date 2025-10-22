@@ -55,22 +55,26 @@ public class Main {
         System.out.println("=== Fussballdaten Analyse ===\n");
 
         // --- Filter: nur Spiele der Liga/Saison ---
-        System.out.println("-- Filter: Spiele " + league + " " + season + " --");
+        System.out.println("-- Filter: Spiele " + league + " " + season + " (letzte 10) --");
         List<Match> filtered = new ArrayList<>();
         for (Match m : matches) {
             if (m.league.equals(league) && m.season == season) {
                 filtered.add(m);
             }
         }
-        for (Match m : filtered) {
+        int startIdx = Math.max(0, filtered.size() - 10);
+        List<Match> last = filtered.subList(startIdx, filtered.size());
+        for (Match m : last) {
             System.out.printf(Locale.ROOT, "%s | %s vs %s | %d:%d%n",
                     m.date, m.homeTeam, m.awayTeam, m.homeGoals, m.awayGoals);
         }
         System.out.println();
 
         // --- Map: Tordifferenz je Spiel ---
-        System.out.println("-- Map: Tordifferenz pro Spiel (alle) --");
-        for (Match m : matches) {
+        System.out.println("-- Map: Tordifferenz pro Spiel (alle) (letzte 10) --");
+        int startIdxMap = Math.max(0, filtered.size() - 10);
+        List<Match> lastMap = filtered.subList(startIdxMap, filtered.size());
+        for (Match m : lastMap) {
             int diff = m.homeGoals - m.awayGoals;
             System.out.printf(Locale.ROOT, "%s - %s | Diff: %d%n", m.homeTeam, m.awayTeam, diff);
         }
