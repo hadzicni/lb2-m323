@@ -14,12 +14,11 @@ public class CsvUtil {
             String line;
             boolean headerSkipped = false;
             while ((line = br.readLine()) != null) {
-                if (!headerSkipped) { // skip header
+                if (!headerSkipped) {
                     headerSkipped = true;
                     continue;
                 }
                 if (line.isBlank()) continue;
-                // naive split: datasets avoid quoted commas
                 String[] cols = line.split(",");
                 rows.add(cols);
             }

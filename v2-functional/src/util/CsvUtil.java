@@ -14,7 +14,7 @@ public class CsvUtil {
             String line;
             boolean headerSkipped = false;
             while ((line = br.readLine()) != null) {
-                if (!headerSkipped) { // skip header
+                if (!headerSkipped) {
                     headerSkipped = true;
                     continue;
                 }
